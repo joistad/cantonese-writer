@@ -69,6 +69,25 @@ const AnkiExport = (function () {
 
 
   // ===================================================================
+  // Build tone-colored character field
+  // ===================================================================
+
+  function buildToneColoredField(card) {
+    const trad = card.traditional;
+    const jyut = card.jyutping || '';
+    const syllables = jyut.split(/\s+/);
+    const chars = trad.split('');
+
+    return chars.map((ch, i) => {
+      const syl = syllables[i] || '';
+      const m = syl.match(/(\d)$/);
+      const tone = m ? m[1] : '0';
+      return `<span class="char-tone${tone}">${ch}</span>`;
+    }).join('');
+  }
+
+
+  // ===================================================================
   // Checksum & GUID helpers
   // ===================================================================
 
@@ -330,10 +349,13 @@ const AnkiExport = (function () {
 
       const definitionsHTML = buildDefinitionsHTML(card);
 
+      // Wrap each character in a tone-color span
+      const toneColoredChars = buildToneColoredField(card);
+
       // 6 fields: Simplified, Traditional, Pinyin, Zhuyin, Definitions, Audio
       const fldValues = [
-        card.traditional,
-        card.traditional,
+        toneColoredChars,
+        toneColoredChars,
         card.jyutping || '',
         '',
         definitionsHTML,
