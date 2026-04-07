@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>寫粵字 Cantonese Xiehanzi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>寫</text></svg>">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+        <path d="M8 10h16M16 10v14M10 16h12M8 22h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      寫粵字 Cantonese Xiehanzi
+    </a>
+    <div class="navbar-links">
+      <a href="#" class="active" id="nav-create">Create</a>
+    </div>
+    <div class="navbar-right">
+      <a href="https://github.com/krmanik/Anki-xiehanzi" target="_blank" rel="noopener" class="github-link">
+        GitHub
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="moon-icon" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Page 1: Create Deck Settings -->
+    <div class="page active" id="page-1">
+      <h1 class="page-title">Create Deck</h1>
+
+      <!-- Deck Title -->
+      <div class="form-group">
+        <h2 class="section-title">Enter Deck Title</h2>
+        <input type="text" class="form-input" id="deck-title" value="cantonese-xiehanzi" placeholder="Enter deck title...">
+      </div>
+
+      <!-- Audio Settings -->
+      <div class="form-group">
+        <h2 class="section-title">Audio Settings</h2>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="include-audio" checked>
+            Include Audio (Text-to-Speech)
+          </label>
+        </div>
+        <p class="audio-note" id="audio-note">Audio files will be generated (this may take some time)</p>
+      </div>
+
+      <!-- Card Types -->
+      <div class="form-group">
+        <h2 class="section-title">Create Card Types</h2>
+        <div class="tabs-container" id="card-types-tabs">
+          <div class="tabs-header" id="tabs-header">
+            <!-- Tabs inserted by JS -->
+          </div>
+          <div class="tab-content" id="tab-content">
+            <!-- Tab content inserted by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav-buttons">
+        <div></div>
+        <button class="btn btn-primary" id="btn-next-1">Next →</button>
+      </div>
+    </div>
+
+    <!-- Page 2: Input Characters -->
+    <div class="page" id="page-2">
+      <h1 class="page-title">Input Chinese Characters</h1>
+
+      <!-- Dictionary Status -->
+      <div class="dict-status" id="dict-status">
+        <div class="spinner-sm"></div>
+        Loading dictionary...
+      </div>
+
+      <!-- Input Mode -->
+      <div class="form-group">
+        <div class="input-mode-group">
+          <label for="input-mode" style="font-weight:500; font-size:0.9rem;">Input Mode:</label>
+          <select class="form-select" id="input-mode">
+            <option value="word">Word</option>
+            <option value="paragraph">Paragraph</option>
+            <option value="file">File</option>
+          </select>
+        </div>
+
+        <!-- Word Input -->
+        <div id="word-input-area">
+          <div class="input-row">
+            <input type="text" class="form-input" id="char-input" placeholder="Enter Chinese characters..." autocomplete="off">
+            <button class="btn btn-primary" id="btn-add">Add</button>
+          </div>
+        </div>
+
+        <!-- Paragraph Input -->
+        <div id="paragraph-input-area" style="display:none;">
+          <div class="input-row">
+            <textarea class="form-input" id="paragraph-input" rows="4" placeholder="Enter a paragraph of Chinese text..." style="resize:vertical;"></textarea>
+          </div>
+          <button class="btn btn-primary" id="btn-add-paragraph">Add Characters</button>
+        </div>
+
+        <!-- File Input -->
+        <div id="file-input-area" style="display:none;">
+          <div class="file-input-wrapper">
+            <input type="file" id="file-input" accept=".txt,.csv,.tsv">
+          </div>
+          <button class="btn btn-primary" id="btn-add-file">Process File</button>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container" id="progress-container">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="progress-text" id="progress-text">Processing...</p>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-container" id="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="select-all"></th>
+              <th>Traditional</th>
+              <th>Jyutping</th>
+              <th>Definitions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+        <div class="rows-per-page">
+          <label for="rows-per-page">Rows per page:</label>
+          <select id="rows-per-page">
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <button class="btn btn-danger" id="btn-delete">Delete Selected</button>
+        <button class="btn btn-outline" id="btn-cancel">Cancel</button>
+        <button class="btn btn-outline" id="btn-export-csv">Export CSV</button>
+        <button class="btn btn-primary" id="btn-generate">Generate Deck</button>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav-buttons">
+        <button class="btn btn-outline" id="btn-prev-2">← Previous</button>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sql.js@1.8.0/dist/sql-wasm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+
+  <!-- App Scripts -->
+  <script src="data/cantojpmin_data.js"></script>
+  <script src="dict.js"></script>
+  <script src="anki-templates.dat.js"></script>
+  <script src="anki-export.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
