@@ -4,13 +4,224 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>寫粵字 Cantonese Xiehanzi</title>
+  <meta name="description" content="Learn, read, write and practice Cantonese by drawing strokes in Anki. Jyutping romanisation, stroke order, Traditional characters and Cantonese text-to-speech.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>寫</text></svg>">
+  <style>
+    /* ===== Landing Page Styles ===== */
+
+    /* Hero */
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+    }
+
+    .hero-chars {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-char-wrap {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-char-text {
+      font-size: 5.5rem;
+      line-height: 1;
+      font-family: 'Noto Sans TC', 'Noto Sans SC', system-ui, sans-serif;
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.65rem 1.75rem;
+      border: 2px solid #1fa7d1;
+      color: #1fa7d1;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .btn-hero:hover {
+      background: #1fa7d1;
+      color: #fff;
+    }
+
+    [data-theme="dark"] .btn-hero {
+      border-color: #26c6da;
+      color: #26c6da;
+    }
+
+    [data-theme="dark"] .btn-hero:hover {
+      background: #26c6da;
+      color: #111;
+    }
+
+    /* Section divider */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 0;
+    }
+
+    /* Features */
+    .features {
+      padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .features-heading {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      color: var(--text-primary);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem 2rem;
+    }
+
+    @media (max-width: 680px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 440px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 1.25rem 0.75rem;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+    }
+
+    .feature-icon svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .feature-desc {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+      color: var(--text-primary);
+    }
+
+    .cta-section p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+    }
+
+    /* Mobile hero chars */
+    @media (max-width: 400px) {
+      .hero-char-wrap {
+        width: 90px;
+        height: 90px;
+      }
+      .hero-char-text {
+        font-size: 4rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="#" class="navbar-brand">
+    <a href="./" class="navbar-brand">
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
         <path d="M8 10h16M16 10v14M10 16h12M8 22h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -18,16 +229,28 @@
       寫粵字 Cantonese Xiehanzi
     </a>
     <div class="navbar-links">
-      <a href="#" class="active" id="nav-create">Create</a>
+      <a href="create.html">Create</a>
     </div>
     <div class="navbar-right">
-      <a href="https://github.com/krmanik/Anki-xiehanzi" target="_blank" rel="noopener" class="github-link">
+      <a href="https://github.com/joistad/cantonese-xiehanzi" target="_blank" rel="noopener" class="github-link">
         GitHub
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
       </a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
         <svg class="moon-icon" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -36,169 +259,213 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Page 1: Create Deck Settings -->
-    <div class="page active" id="page-1">
-      <h1 class="page-title">Create Deck</h1>
-
-      <!-- Deck Title -->
-      <div class="form-group">
-        <h2 class="section-title">Enter Deck Title</h2>
-        <input type="text" class="form-input" id="deck-title" value="cantonese-xiehanzi" placeholder="Enter deck title...">
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-chars">
+        <div class="hero-char-wrap" id="char-xie"></div>
+        <div class="hero-char-wrap" id="char-yue"></div>
+        <div class="hero-char-wrap" id="char-zi"></div>
       </div>
 
-      <!-- Audio Settings -->
-      <div class="form-group">
-        <h2 class="section-title">Audio Settings</h2>
-        <div class="checkbox-group">
-          <label class="checkbox-label">
-            <input type="checkbox" id="include-audio" checked>
-            Include Audio (Text-to-Speech)
-          </label>
-        </div>
-        <p class="audio-note" id="audio-note">Audio files will be generated (this may take some time)</p>
-      </div>
+      <h1 class="hero-title">Cantonese Xiehanzi</h1>
+      <p class="hero-subtitle">Learn, read, write and practice Cantonese by drawing strokes in Anki</p>
 
-      <!-- Card Types -->
-      <div class="form-group">
-        <h2 class="section-title">Create Card Types</h2>
-        <div class="tabs-container" id="card-types-tabs">
-          <div class="tabs-header" id="tabs-header">
-            <!-- Tabs inserted by JS -->
+      <div class="hero-actions">
+        <a href="create.html" class="btn-hero">Create Deck</a>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Features -->
+    <section class="features">
+      <h2 class="features-heading">Features</h2>
+      <div class="features-grid">
+
+        <!-- Jyutping -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h16M4 12h10M4 17h7"/>
+              <circle cx="19" cy="17" r="2.5"/>
+              <path d="M19 14.5V9"/>
+            </svg>
           </div>
-          <div class="tab-content" id="tab-content">
-            <!-- Tab content inserted by JS -->
+          <div class="feature-title">Jyutping</div>
+          <div class="feature-desc">Learn Cantonese pronunciations with accurate Jyutping romanisation</div>
+        </div>
+
+        <!-- Meanings -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              <line x1="9" y1="9" x2="15" y2="9"/>
+              <line x1="9" y1="13" x2="13" y2="13"/>
+            </svg>
           </div>
-        </div>
-      </div>
-
-      <!-- Navigation -->
-      <div class="nav-buttons">
-        <div></div>
-        <button class="btn btn-primary" id="btn-next-1">Next →</button>
-      </div>
-    </div>
-
-    <!-- Page 2: Input Characters -->
-    <div class="page" id="page-2">
-      <h1 class="page-title">Input Chinese Characters</h1>
-
-      <!-- Dictionary Status -->
-      <div class="dict-status" id="dict-status">
-        <div class="spinner-sm"></div>
-        Loading dictionary...
-      </div>
-
-      <!-- Input Mode -->
-      <div class="form-group">
-        <div class="input-mode-group">
-          <label for="input-mode" style="font-weight:500; font-size:0.9rem;">Input Mode:</label>
-          <select class="form-select" id="input-mode">
-            <option value="word">Word</option>
-            <option value="paragraph">Paragraph</option>
-            <option value="file">File</option>
-          </select>
+          <div class="feature-title">Meanings</div>
+          <div class="feature-desc">Learn definitions with English translations and detailed meaning</div>
         </div>
 
-        <!-- Word Input -->
-        <div id="word-input-area">
-          <div class="input-row">
-            <input type="text" class="form-input" id="char-input" placeholder="Enter Chinese characters..." autocomplete="off">
-            <button class="btn btn-primary" id="btn-add">Add</button>
+        <!-- Strokes -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="M2 2l7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
           </div>
+          <div class="feature-title">Strokes</div>
+          <div class="feature-desc">Practice stroke order of Traditional characters by drawing in Anki</div>
         </div>
 
-        <!-- Paragraph Input -->
-        <div id="paragraph-input-area" style="display:none;">
-          <div class="input-row">
-            <textarea class="form-input" id="paragraph-input" rows="4" placeholder="Enter a paragraph of Chinese text..." style="resize:vertical;"></textarea>
+        <!-- Audio -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
           </div>
-          <button class="btn btn-primary" id="btn-add-paragraph">Add Characters</button>
+          <div class="feature-title">Audio</div>
+          <div class="feature-desc">Learn words with Cantonese text-to-speech (Hong Kong neural voice)</div>
         </div>
 
-        <!-- File Input -->
-        <div id="file-input-area" style="display:none;">
-          <div class="file-input-wrapper">
-            <input type="file" id="file-input" accept=".txt,.csv,.tsv">
+        <!-- 6 Tones -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="18" x2="7" y2="6"/>
+              <line x1="7" y1="6" x2="10" y2="10"/>
+              <line x1="10" y1="10" x2="13" y2="6"/>
+              <line x1="13" y1="6" x2="16" y2="14"/>
+              <line x1="16" y1="14" x2="18" y2="10"/>
+              <line x1="18" y1="10" x2="21" y2="18"/>
+            </svg>
           </div>
-          <button class="btn btn-primary" id="btn-add-file">Process File</button>
+          <div class="feature-title">6 Tones</div>
+          <div class="feature-desc">All six Cantonese tones shown with distinct colour coding</div>
         </div>
-      </div>
 
-      <!-- Progress Bar -->
-      <div class="progress-container" id="progress-container">
-        <div class="progress-bar-wrapper">
-          <div class="progress-bar" id="progress-bar"></div>
+        <!-- Traditional Characters -->
+        <div class="feature-item">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <line x1="12" y1="3" x2="12" y2="21"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="7" y1="7" x2="7" y2="17"/>
+              <line x1="17" y1="7" x2="17" y2="17"/>
+            </svg>
+          </div>
+          <div class="feature-title">Traditional Characters</div>
+          <div class="feature-desc">Practice writing Traditional Chinese characters used in Cantonese</div>
         </div>
-        <p class="progress-text" id="progress-text">Processing...</p>
+
       </div>
+    </section>
 
-      <!-- Data Table -->
-      <div class="table-container" id="table-container">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th><input type="checkbox" id="select-all"></th>
-              <th>Traditional</th>
-              <th>Jyutping</th>
-              <th>Definitions</th>
-            </tr>
-          </thead>
-          <tbody id="table-body">
-          </tbody>
-        </table>
-      </div>
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Ready to dive in?</h2>
+      <p>Want to generate your own Cantonese Xiehanzi decks?</p>
+      <a href="create.html" class="btn-hero">Create Deck</a>
+    </section>
+  </main>
 
-      <!-- Pagination -->
-      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-        <div class="rows-per-page">
-          <label for="rows-per-page">Rows per page:</label>
-          <select id="rows-per-page">
-            <option value="10" selected>10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-          </select>
-        </div>
-        <div class="pagination" id="pagination"></div>
-      </div>
+  <footer class="footer">
+    <a href="https://github.com/joistad/cantonese-xiehanzi" target="_blank" rel="noopener">cantonese-xiehanzi</a>
+    &nbsp;·&nbsp;
+    Built with <a href="https://github.com/nicowillis/hanzi-writer" target="_blank" rel="noopener">HanziWriter</a>
+    &amp; <a href="https://github.com/krmanik/Anki-xiehanzi" target="_blank" rel="noopener">Anki-xiehanzi</a>
+  </footer>
 
-      <!-- Action Buttons -->
-      <div class="action-buttons">
-        <button class="btn btn-danger" id="btn-delete">Delete Selected</button>
-        <button class="btn btn-outline" id="btn-cancel">Cancel</button>
-        <button class="btn btn-outline" id="btn-export-csv">Export CSV</button>
-        <button class="btn btn-primary" id="btn-generate">Generate Deck</button>
-      </div>
-
-      <!-- Navigation -->
-      <div class="nav-buttons">
-        <button class="btn btn-outline" id="btn-prev-2">← Previous</button>
-        <div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Loading Overlay -->
-  <div class="loading-overlay" id="loading-overlay">
-    <div class="loading-spinner"></div>
-  </div>
-
-  <!-- Toast -->
-  <div class="toast" id="toast"></div>
-
-  <!-- External Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sql.js@1.8.0/dist/sql-wasm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <!-- HanziWriter -->
   <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
 
-  <!-- App Scripts -->
-  <script src="data/cantojpmin_data.js"></script>
-  <script src="dict.js"></script>
-  <script src="anki-templates.dat.js"></script>
-  <script src="anki-export.js"></script>
-  <script src="app.js"></script>
+  <script>
+    // ===== Theme Toggle =====
+    (function () {
+      var toggle = document.getElementById('theme-toggle');
+      var sunIcon = toggle.querySelector('.sun-icon');
+      var moonIcon = toggle.querySelector('.moon-icon');
+
+      function setTheme(dark) {
+        if (dark) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        }
+      }
+
+      // Init from system preference
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark);
+
+      toggle.addEventListener('click', function () {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        setTheme(!isDark);
+      });
+    })();
+
+    // ===== HanziWriter Hero Animation =====
+    var CHARS = [
+      { id: 'char-xie', char: '寫', color: '#2dbe6c', delay: 0 },
+      { id: 'char-yue', char: '粵', color: '#1fa7d1', delay: 800 },
+      { id: 'char-zi',  char: '字', color: '#607d8b', delay: 1600 }
+    ];
+
+    CHARS.forEach(function (cfg) {
+      var el = document.getElementById(cfg.id);
+      var size = el.offsetWidth || 120;
+
+      try {
+        var writer = HanziWriter.create(el, cfg.char, {
+          width: size,
+          height: size,
+          padding: 6,
+          strokeColor: cfg.color,
+          radicalColor: cfg.color,
+          outlineColor: document.documentElement.getAttribute('data-theme') === 'dark'
+            ? 'rgba(255,255,255,0.12)'
+            : 'rgba(0,0,0,0.08)',
+          delayBetweenLoops: 1200,
+          strokeAnimationSpeed: 1,
+          onLoadCharDataError: function () {
+            // Fallback: styled text character when hanzi-writer-data 404s
+            el.innerHTML = '';
+            var span = document.createElement('span');
+            span.className = 'hero-char-text';
+            span.style.color = cfg.color;
+            span.textContent = cfg.char;
+            el.appendChild(span);
+          }
+        });
+
+        setTimeout(function () {
+          writer.loopCharacterAnimation();
+        }, cfg.delay);
+
+      } catch (e) {
+        // Create fallback text
+        var span = document.createElement('span');
+        span.className = 'hero-char-text';
+        span.style.color = cfg.color;
+        span.textContent = cfg.char;
+        el.innerHTML = '';
+        el.appendChild(span);
+      }
+    });
+  </script>
 </body>
 </html>
