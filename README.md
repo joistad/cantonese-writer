@@ -19,7 +19,7 @@ A Cantonese adaptation of [Xiehanzi](https://github.com/krmanik/Anki-xiehanzi) â
 
 ## How to use
 
-1. Open the [live app](https://www.perplexity.ai/computer/a/cantonese-xiehanzi-bYC.icAqTGy4h.zWnoy9YQ)
+1. Open the [live app](https://joistad.github.io/cantonese-xiehanzi/)
 2. Search for a Cantonese word or character
 3. Add words to your deck
 4. Configure card options (Writing Component, Audio, Front side fields)
