@@ -53,11 +53,26 @@
         <h2 class="section-title">Audio Settings</h2>
         <div class="checkbox-group">
           <label class="checkbox-label">
-            <input type="checkbox" id="include-audio" checked>
-            Include Audio (Text-to-Speech)
+            <input type="checkbox" id="include-audio">
+            Include Cantonese Audio (Google Cloud TTS)
           </label>
         </div>
-        <p class="audio-note" id="audio-note">Audio files will be generated (this may take some time)</p>
+        <div id="audio-key-section" style="display:none; margin-top:0.75rem;">
+          <label class="section-title" style="font-size:0.9rem; font-weight:600; display:block; margin-bottom:0.4rem;" for="tts-api-key">
+            Google Cloud TTS API Key
+          </label>
+          <input type="password" class="form-input" id="tts-api-key"
+            placeholder="Paste your API key here..."
+            autocomplete="off" style="font-family:monospace; font-size:0.875rem;">
+          <p style="margin-top:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+            Uses the <strong>yue-HK-Standard-A</strong> voice (genuine Cantonese).
+            Get a free key at
+            <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com"
+               target="_blank" rel="noopener" style="color:var(--accent);">Google Cloud Console</a>
+            — free tier is 1M characters/month.
+          </p>
+        </div>
+        <p class="audio-note" id="audio-note" style="margin-top:0.5rem;">Check the box and enter an API key to include audio</p>
       </div>
 
       <!-- Card Types -->

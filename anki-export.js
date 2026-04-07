@@ -386,26 +386,39 @@ const AnkiExport = (function () {
 
 
   // ===================================================================
-  // TTS Audio generation
+  // TTS Audio generation — Google Cloud TTS (yue-HK-Standard-A)
   // ===================================================================
 
-  async function generateAudio(word) {
+  async function generateAudio(word, apiKey) {
+    if (!apiKey) return null;
     try {
-      // Edge TTS via WebSocket (same as original Xiehanzi) — no CORS restrictions,
-      // Cantonese Hong Kong neural voice.
-      if (typeof EdgeTTSBrowser === 'undefined') {
-        throw new Error('EdgeTTSBrowser not loaded');
+      const response = await fetch(
+        `https://texttospeech.googleapis.com/v1/text:synthesize?key=${encodeURIComponent(apiKey)}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            input: { text: word },
+            voice: { languageCode: 'yue-Hant-HK', name: 'yue-HK-Standard-A' },
+            audioConfig: { audioEncoding: 'MP3', speakingRate: 0.9 }
+          })
+        }
+      );
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        const msg = (err.error && err.error.message) || response.statusText;
+        throw new Error(`Google TTS error: ${msg}`);
       }
-      const tts = new EdgeTTSBrowser(word, 'zh-HK-HiuGaaiNeural');
-      const result = await tts.synthesize();
-      if (!result || !result.audio || result.audio.size < 100) {
-        throw new Error('Empty audio from EdgeTTS');
-      }
-      // Small delay between requests
-      await new Promise(r => setTimeout(r, 300 + Math.floor(Math.random() * 300)));
-      return result.audio;
+
+      const data = await response.json();
+      if (!data.audioContent) throw new Error('No audioContent in response');
+
+      // Decode base64 → Blob
+      const bytes = Uint8Array.from(atob(data.audioContent), c => c.charCodeAt(0));
+      return new Blob([bytes], { type: 'audio/mpeg' });
     } catch (e) {
-      console.warn('EdgeTTS failed for:', word, e.message);
+      console.warn('Google TTS failed for:', word, e.message);
       return null;
     }
   }

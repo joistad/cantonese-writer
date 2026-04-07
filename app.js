@@ -20,6 +20,8 @@
   const deckTitleInput = document.getElementById('deck-title');
   const includeAudioCb = document.getElementById('include-audio');
   const audioNote = document.getElementById('audio-note');
+  const audioKeySection = document.getElementById('audio-key-section');
+  const ttsApiKeyInput = document.getElementById('tts-api-key');
   const tabsHeader = document.getElementById('tabs-header');
   const tabContent = document.getElementById('tab-content');
   const inputMode = document.getElementById('input-mode');
@@ -64,10 +66,21 @@
   initTheme();
 
   // ===== Audio Toggle =====
+  // Restore saved API key
+  const savedKey = localStorage.getItem('gcloud_tts_key');
+  if (savedKey) ttsApiKeyInput.value = savedKey;
+
   includeAudioCb.addEventListener('change', () => {
-    audioNote.textContent = includeAudioCb.checked
-      ? 'Audio files will be generated (this may take some time)'
-      : 'Audio files will not be generated for faster deck creation';
+    const checked = includeAudioCb.checked;
+    audioKeySection.style.display = checked ? 'block' : 'none';
+    audioNote.textContent = checked
+      ? 'Enter your API key above to generate Cantonese audio'
+      : 'Audio will not be included';
+  });
+
+  ttsApiKeyInput.addEventListener('input', () => {
+    const key = ttsApiKeyInput.value.trim();
+    if (key) localStorage.setItem('gcloud_tts_key', key);
   });
 
   // ===== Tab System =====
@@ -465,24 +478,37 @@
     try {
       // Generate audio if needed
       if (includeAudio) {
-        updateProgress(0, 'Loading TTS engine...');
-
-        // Load Edge TTS bundle if not already available
-        if (typeof EdgeTTSBrowser === 'undefined') {
-          await loadScript('edgeTTSBrowser.bundle.js');
+        const apiKey = ttsApiKeyInput.value.trim();
+        if (!apiKey) {
+          showToast('Please enter a Google Cloud TTS API key', 'error');
+          showProgress(false);
+          return;
         }
 
-        updateProgress(0, 'Generating audio...');
+        let successCount = 0;
+        let firstError = null;
 
         for (let i = 0; i < tableData.length; i++) {
           updateProgress(
             Math.floor((i / tableData.length) * 40),
             `Generating audio ${i + 1} / ${tableData.length}...`
           );
-          const blob = await AnkiExport.generateAudio(tableData[i].traditional);
+          const blob = await AnkiExport.generateAudio(tableData[i].traditional, apiKey);
           if (blob) {
             audioFiles[tableData[i].traditional] = blob;
+            successCount++;
+          } else if (!firstError) {
+            firstError = tableData[i].traditional;
           }
+        }
+
+        if (successCount === 0) {
+          showToast('Audio generation failed — check your API key', 'error');
+          showProgress(false);
+          return;
+        }
+        if (firstError) {
+          console.warn('Some audio files failed, first failure:', firstError);
         }
       }
 
