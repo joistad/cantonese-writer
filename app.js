@@ -66,15 +66,20 @@
   initTheme();
 
   // ===== Audio Toggle =====
-  // Restore saved API key
+  // Restore saved API key and auto-enable audio if key exists
   const savedKey = localStorage.getItem('gcloud_tts_key');
-  if (savedKey) ttsApiKeyInput.value = savedKey;
+  if (savedKey) {
+    ttsApiKeyInput.value = savedKey;
+    includeAudioCb.checked = true;
+    audioKeySection.style.display = 'block';
+    audioNote.textContent = 'API key loaded — audio will be included';
+  }
 
   includeAudioCb.addEventListener('change', () => {
     const checked = includeAudioCb.checked;
     audioKeySection.style.display = checked ? 'block' : 'none';
     audioNote.textContent = checked
-      ? 'Enter your API key above to generate Cantonese audio'
+      ? (ttsApiKeyInput.value.trim() ? 'API key loaded — audio will be included' : 'Enter your API key above to generate Cantonese audio')
       : 'Audio will not be included';
   });
 
