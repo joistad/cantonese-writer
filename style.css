@@ -769,3 +769,230 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* ===================================================================
+   CANTONESE WRITER — UX OVERHAUL ADDITIONS
+   =================================================================== */
+
+/* ── How It Works banner ──────────────────────────────────────────── */
+.how-it-works {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.how-it-works-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.how-it-works-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.how-it-works-title svg {
+  width: 15px;
+  height: 15px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.how-it-works-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.how-it-works-dismiss:hover { opacity: 1; }
+
+.how-it-works-steps {
+  display: flex;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hiw-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 130px;
+}
+
+.hiw-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.hiw-text strong {
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 0.1rem;
+  color: var(--text-primary);
+}
+
+.hiw-text span {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.how-it-works-footer {
+  margin-top: 0.85rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.how-it-works-footer a { color: var(--accent); }
+
+/* ── Accordion ────────────────────────────────────────────────────── */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+  color: var(--text-primary);
+  gap: 0.75rem;
+}
+
+.accordion-header:hover { background: var(--bg-secondary); }
+
+.accordion-header.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-color: var(--border-color);
+}
+
+.accordion-header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.accordion-header-left > svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.accordion-header-label { font-size: 0.9rem; font-weight: 600; display: block; }
+.accordion-header-sub { font-size: 0.75rem; color: var(--text-muted); display: block; }
+
+.accordion-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.chevron-icon {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s ease;
+  color: var(--text-muted);
+}
+
+.accordion-header.open .chevron-icon { transform: rotate(180deg); }
+
+.accordion-panel {
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  display: none;
+  padding: 1rem;
+}
+
+.accordion-panel.open { display: block; }
+
+/* ── Status pill ──────────────────────────────────────────────────── */
+.status-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  border-radius: 99px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-pill.on {
+  background: rgba(45, 190, 108, 0.14);
+  color: #25a85e;
+}
+
+[data-theme="dark"] .status-pill.on { color: #2dbe6c; }
+
+.status-pill.off {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+}
+
+/* ── Section helpers ──────────────────────────────────────────────── */
+.section-helper {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: -0.25rem 0 0.85rem;
+  line-height: 1.5;
+}
+
+.panel-desc {
+  font-size: 0.81rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.9rem;
+  line-height: 1.55;
+}
+
+/* ── Checkbox with sub-description ───────────────────────────────── */
+.checkbox-with-desc { display: flex; flex-direction: column; gap: 0.05rem; }
+.checkbox-sub { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ── Table footer / count display ────────────────────────────────── */
+.table-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.char-count-badge {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 99px;
+  padding: 0.15rem 0.6rem;
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>寫粵字 Cantonese Xiehanzi</title>
+  <title>Cantonese Writer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>寫</text></svg>">
 </head>
@@ -15,7 +15,7 @@
         <rect x="2" y="2" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
         <path d="M8 10h16M16 10v14M10 16h12M8 22h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       </svg>
-      寫粵字 Cantonese Xiehanzi
+      Cantonese Writer
     </a>
     <div class="navbar-links">
       <a href="create.html" class="active" id="nav-create">Create</a>
@@ -38,46 +38,110 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <!-- Page 1: Create Deck Settings -->
+
+    <!-- ══════════════════════════════════════════════════════════
+         PAGE 1 — Configure
+         ══════════════════════════════════════════════════════════ -->
     <div class="page active" id="page-1">
-      <h1 class="page-title">Create Deck</h1>
+      <h1 class="page-title">Configure Your Deck</h1>
 
-      <!-- Deck Title -->
-      <div class="form-group">
-        <h2 class="section-title">Enter Deck Title</h2>
-        <input type="text" class="form-input" id="deck-title" value="cantonese-xiehanzi" placeholder="Enter deck title...">
+      <!-- How It Works -->
+      <div class="how-it-works" id="how-it-works">
+        <div class="how-it-works-header">
+          <span class="how-it-works-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            How it works
+          </span>
+          <button class="how-it-works-dismiss" id="hiw-dismiss" aria-label="Dismiss">✕</button>
+        </div>
+        <div class="how-it-works-steps">
+          <div class="hiw-step">
+            <span class="hiw-num">1</span>
+            <div class="hiw-text">
+              <strong>Configure</strong>
+              <span>Choose what your flashcards look like</span>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <span class="hiw-num">2</span>
+            <div class="hiw-text">
+              <strong>Add characters</strong>
+              <span>Enter the Cantonese words you want to learn</span>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <span class="hiw-num">3</span>
+            <div class="hiw-text">
+              <strong>Download &amp; import</strong>
+              <span>Open the .apkg file in Anki to start studying</span>
+            </div>
+          </div>
+        </div>
+        <p class="how-it-works-footer">
+          New to Anki? It's a free spaced-repetition flashcard app — <a href="https://apps.ankiweb.net" target="_blank" rel="noopener">download it here</a>. After importing, your cards appear automatically.
+        </p>
       </div>
 
-      <!-- Audio Settings -->
+      <!-- Deck Name -->
       <div class="form-group">
-        <h2 class="section-title">Audio Settings</h2>
-        <div class="checkbox-group">
-          <label class="checkbox-label">
-            <input type="checkbox" id="include-audio">
-            Include Cantonese Audio (Google Cloud TTS)
-          </label>
-        </div>
-        <div id="audio-key-section" style="display:none; margin-top:0.75rem;">
-          <label class="section-title" style="font-size:0.9rem; font-weight:600; display:block; margin-bottom:0.4rem;" for="tts-api-key">
-            Google Cloud TTS API Key
-          </label>
-          <input type="password" class="form-input" id="tts-api-key"
-            placeholder="Paste your API key here..."
-            autocomplete="off" style="font-family:monospace; font-size:0.875rem;">
-          <p style="margin-top:0.4rem; font-size:0.8rem; color:var(--text-muted);">
-            Uses the <strong>yue-HK-Standard-A</strong> voice (genuine Cantonese).
-            Get a free key at
-            <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com"
-               target="_blank" rel="noopener" style="color:var(--accent);">Google Cloud Console</a>
-            — free tier is 1M characters/month.
+        <h2 class="section-title">Deck Name</h2>
+        <p class="section-helper">This becomes the name of the deck inside Anki after you import it.</p>
+        <input type="text" class="form-input" id="deck-title" value="Cantonese Writer" placeholder="Enter deck name...">
+      </div>
+
+      <!-- Audio — Accordion -->
+      <div class="form-group">
+        <button class="accordion-header" id="audio-header" aria-expanded="false" aria-controls="audio-panel">
+          <div class="accordion-header-left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            </svg>
+            <div>
+              <span class="accordion-header-label">Cantonese Audio</span>
+              <span class="accordion-header-sub">Google Cloud TTS · yue-HK voice</span>
+            </div>
+          </div>
+          <div class="accordion-header-right">
+            <span class="status-pill off" id="audio-pill">Off</span>
+            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="accordion-panel" id="audio-panel">
+          <p class="panel-desc">
+            Generates native Cantonese audio for each character using Google's text-to-speech API.
+            The <strong>yue-HK-Standard-A</strong> voice is a genuine Cantonese (Hong Kong) voice —
+            not Mandarin. Free tier covers 1 million characters per month.
           </p>
+          <div class="checkbox-group" style="margin-bottom:0.85rem;">
+            <label class="checkbox-label">
+              <input type="checkbox" id="include-audio">
+              Include audio in generated cards
+            </label>
+          </div>
+          <div id="audio-key-section" style="display:none;">
+            <label class="section-title" style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:0.4rem;" for="tts-api-key">
+              API Key
+            </label>
+            <input type="password" class="form-input" id="tts-api-key"
+              placeholder="Paste your Google Cloud TTS API key..."
+              autocomplete="off" style="font-family:monospace; font-size:0.875rem;">
+            <p style="margin-top:0.45rem; font-size:0.78rem; color:var(--text-muted); line-height:1.55;">
+              <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com"
+                 target="_blank" rel="noopener" style="color:var(--accent);">Get a free API key</a>
+              at Google Cloud Console — enable the Text-to-Speech API first.
+              Your key is saved locally in your browser and never sent anywhere else.
+            </p>
+          </div>
+          <p class="audio-note" id="audio-note" style="font-size:0.78rem; color:var(--text-muted); margin-top:0.5rem;"></p>
         </div>
-        <p class="audio-note" id="audio-note" style="margin-top:0.5rem;">Check the box and enter an API key to include audio</p>
       </div>
 
-      <!-- Card Types -->
+      <!-- Flashcard Layout -->
       <div class="form-group">
-        <h2 class="section-title">Create Card Types</h2>
+        <h2 class="section-title">Flashcard Layout</h2>
+        <p class="section-helper">Define what each flashcard looks like. Most learners only need one card type — you can always add more later.</p>
         <div class="tabs-container" id="card-types-tabs">
           <div class="tabs-header" id="tabs-header">
             <!-- Tabs inserted by JS -->
@@ -91,13 +155,15 @@
       <!-- Navigation -->
       <div class="nav-buttons">
         <div></div>
-        <button class="btn btn-primary" id="btn-next-1">Next →</button>
+        <button class="btn btn-primary" id="btn-next-1">Next: Add Characters →</button>
       </div>
     </div>
 
-    <!-- Page 2: Input Characters -->
+    <!-- ══════════════════════════════════════════════════════════
+         PAGE 2 — Add Characters
+         ══════════════════════════════════════════════════════════ -->
     <div class="page" id="page-2">
-      <h1 class="page-title">Input Chinese Characters</h1>
+      <h1 class="page-title">Add Characters to Study</h1>
 
       <!-- Dictionary Status -->
       <div class="dict-status" id="dict-status">
@@ -108,36 +174,43 @@
       <!-- Input Mode -->
       <div class="form-group">
         <div class="input-mode-group">
-          <label for="input-mode" style="font-weight:500; font-size:0.9rem;">Input Mode:</label>
+          <label for="input-mode" style="font-weight:500; font-size:0.9rem;">How do you want to add characters?</label>
           <select class="form-select" id="input-mode">
-            <option value="word">Word</option>
-            <option value="paragraph">Paragraph</option>
-            <option value="file">File</option>
+            <option value="word">One word at a time</option>
+            <option value="paragraph">Paste a paragraph</option>
+            <option value="file">Upload a file</option>
           </select>
         </div>
 
         <!-- Word Input -->
         <div id="word-input-area">
           <div class="input-row">
-            <input type="text" class="form-input" id="char-input" placeholder="Enter Chinese characters..." autocomplete="off">
+            <input type="text" class="form-input" id="char-input"
+              placeholder="e.g. 你好  飲茶  香港" autocomplete="off">
             <button class="btn btn-primary" id="btn-add">Add</button>
           </div>
+          <p style="font-size:0.76rem; color:var(--text-muted); margin-top:0.35rem;">
+            You can add multiple words at once — just separate them with spaces.
+          </p>
         </div>
 
         <!-- Paragraph Input -->
         <div id="paragraph-input-area" style="display:none;">
-          <div class="input-row">
-            <textarea class="form-input" id="paragraph-input" rows="4" placeholder="Enter a paragraph of Chinese text..." style="resize:vertical;"></textarea>
-          </div>
-          <button class="btn btn-primary" id="btn-add-paragraph">Add Characters</button>
+          <textarea class="form-input" id="paragraph-input" rows="4"
+            placeholder="Paste any Cantonese text here — all unique characters will be extracted automatically."
+            style="resize:vertical;"></textarea>
+          <button class="btn btn-primary" id="btn-add-paragraph" style="margin-top:0.5rem;">Extract Characters</button>
         </div>
 
         <!-- File Input -->
         <div id="file-input-area" style="display:none;">
+          <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0.5rem;">
+            Upload a plain text file (.txt), CSV, or TSV — all Chinese characters found in the file will be added.
+          </p>
           <div class="file-input-wrapper">
             <input type="file" id="file-input" accept=".txt,.csv,.tsv">
           </div>
-          <button class="btn btn-primary" id="btn-add-file">Process File</button>
+          <button class="btn btn-primary" id="btn-add-file" style="margin-top:0.5rem;">Process File</button>
         </div>
       </div>
 
@@ -149,13 +222,19 @@
         <p class="progress-text" id="progress-text">Processing...</p>
       </div>
 
+      <!-- Table header with count -->
+      <div class="table-header-row" id="table-header-row" style="display:none;">
+        <span style="font-size:0.85rem; font-weight:600; color:var(--text-primary);">Characters</span>
+        <span class="char-count-badge" id="char-count-badge">0 characters</span>
+      </div>
+
       <!-- Data Table -->
       <div class="table-container" id="table-container">
         <table class="data-table">
           <thead>
             <tr>
               <th><input type="checkbox" id="select-all"></th>
-              <th>Traditional</th>
+              <th>Character</th>
               <th>Jyutping</th>
               <th>Definitions</th>
             </tr>
@@ -181,15 +260,15 @@
 
       <!-- Action Buttons -->
       <div class="action-buttons">
-        <button class="btn btn-danger" id="btn-delete">Delete Selected</button>
-        <button class="btn btn-outline" id="btn-cancel">Cancel</button>
+        <button class="btn btn-danger" id="btn-delete">Remove Selected</button>
+        <button class="btn btn-outline" id="btn-cancel">Clear All</button>
         <button class="btn btn-outline" id="btn-export-csv">Export CSV</button>
         <button class="btn btn-primary" id="btn-generate">Generate Deck</button>
       </div>
 
       <!-- Navigation -->
       <div class="nav-buttons">
-        <button class="btn btn-outline" id="btn-prev-2">← Previous</button>
+        <button class="btn btn-outline" id="btn-prev-2">← Back to Settings</button>
         <div></div>
       </div>
     </div>
