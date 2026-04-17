@@ -137,7 +137,7 @@ const AnkiExport = (function () {
 
   async function generateApkg(options) {
     const {
-      deckTitle = 'cantonese-xiehanzi',
+      deckTitle = 'Cantonese Writer',
       cards = [],
       cardTypes = [{ front: [], hasWriting: true }],
       includeAudio = false,
