@@ -44,7 +44,21 @@ A Cantonese adaptation of [Anki-xiehanzi](https://github.com/krmanik/Anki-xiehan
 
 ## Notes on character coverage
 
-HanziWriter stroke data comes from [hanzi-writer-data](https://github.com/chanind/hanzi-writer-data), which covers ~9,500 characters from Standard Chinese. A small number of **exclusively written-Cantonese characters** (e.g. 佢, 喺, 嘅, 咗) are not in that dataset — these show a graceful fallback message instead of a blank field. All other characters work normally.
+HanziWriter stroke data comes from [hanzi-writer-data](https://github.com/chanind/hanzi-writer-data), which covers ~9,500 characters from Standard Chinese. Characters exclusive to written Cantonese are generally absent from this dataset — these show a graceful fallback message instead of a blank writing field. All other characters work normally.
+
+**Known unsupported characters** (stroke data unavailable):
+
+| Character | Jyutping | Meaning |
+|---|---|---|
+| 佢 | keoi5 | he / she / it |
+| 喺 | hai2 | to be at / to be in |
+| 嘅 | ge3 | possessive / sentence particle |
+| 咗 | zo2 | completed action particle (past tense) |
+| 啱 | ngaam1 | correct / just now |
+| 冇 | mou5 | to not have / there is no |
+| 啲 | di1 | some / a little / plural marker |
+| 唔 | m4 | not (negation) |
+| 係 | hai6 | to be (copula) |
 
 ---
 
