@@ -1,6 +1,6 @@
 /* ===== CSS Variables ===== */
 :root {
-  --bg-page: #f5f4ee;
+  --bg-page: linear-gradient(135deg, #fdf6f0 0%, #f0eef8 50%, #eef3fb 100%);
   --bg-primary: #ffffff;
   --bg-secondary: #f5f6f7;
   --bg-info: #e8f4fd;
@@ -26,7 +26,7 @@
 }
 
 [data-theme="dark"] {
-  --bg-page: #111128;
+  --bg-page: linear-gradient(135deg, #12121f 0%, #1a1a2e 50%, #1e1e35 100%);
   --bg-primary: #1a1a2e;
   --bg-secondary: #16213e;
   --bg-info: #1a2744;
@@ -60,6 +60,7 @@ html {
 body {
   font-family: var(--font-family);
   background: var(--bg-page);
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.65;
   transition: background 0.3s ease, color 0.3s ease;
