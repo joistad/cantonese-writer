@@ -5,6 +5,51 @@
 (function () {
   'use strict';
 
+  // ===== HanziWriter Support Check =====
+  const _hanziDataCache = new Map();
+
+  async function charHasHanziData(char) {
+    if (_hanziDataCache.has(char)) return _hanziDataCache.get(char);
+    try {
+      const res = await fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@latest/${encodeURIComponent(char)}.json`);
+      const ok = res.ok;
+      _hanziDataCache.set(char, ok);
+      return ok;
+    } catch {
+      _hanziDataCache.set(char, false);
+      return false;
+    }
+  }
+
+  async function wordIsSupported(word) {
+    const cjkRe = /[\u4e00-\u9fff\u3400-\u4dbf\uF900-\uFAFF]/;
+    for (const char of word) {
+      if (!cjkRe.test(char)) continue;
+      if (!(await charHasHanziData(char))) return false;
+    }
+    return true;
+  }
+
+  function showValidation(skipped, supported) {
+    const vbox = document.getElementById('validation-box');
+    if (!vbox) return;
+    if (skipped.length === 0) {
+      vbox.className = 'validation-box';
+      vbox.innerHTML = '';
+      return;
+    }
+    const pills = skipped.map(w => `<span class="unsupported-word">${w}</span>`).join('');
+    if (supported.length === 0) {
+      vbox.className = 'validation-box error';
+      vbox.innerHTML = `<strong>No cards can be created.</strong> Stroke data is unavailable for all of these characters:<br>${pills}`;
+    } else {
+      vbox.className = 'validation-box warning';
+      vbox.innerHTML =
+        `<strong>${skipped.length} word${skipped.length !== 1 ? 's' : ''} will be skipped</strong> — no stroke data available for these characters, so no cards will be created for them:<br>${pills}` +
+        `<br><small style="display:block;margin-top:6px">${supported.length} word${supported.length !== 1 ? 's' : ''} will be added normally.</small>`;
+    }
+  }
+
   // ===== State =====
   let currentPage = 1;
   let cardTypes = [{ id: 1, front: [], hasWriting: true }];
@@ -302,14 +347,27 @@
   }
 
   async function addWords(words) {
+    // Pre-check HanziWriter support for all words concurrently
     showProgress(true);
+    updateProgress(0, 'Checking stroke data…');
+    const checks = await Promise.all(words.map(async w => ({ word: w, ok: await wordIsSupported(w) })));
+    const supported = checks.filter(c => c.ok).map(c => c.word);
+    const skipped   = checks.filter(c => !c.ok).map(c => c.word);
+
+    showValidation(skipped, supported);
+
+    if (supported.length === 0) {
+      showProgress(false);
+      return;
+    }
+
     let processed = 0;
-    for (const word of words) {
+    for (const word of supported) {
       await addWord(word);
       processed++;
       updateProgress(
-        Math.floor((processed / words.length) * 100),
-        `Processing ${processed} / ${words.length}...`
+        Math.floor((processed / supported.length) * 100),
+        `Processing ${processed} / ${supported.length}…`
       );
     }
     showProgress(false);

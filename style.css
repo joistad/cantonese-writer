@@ -489,6 +489,54 @@ body {
   white-space: nowrap;
 }
 
+/* ===== Validation Box ===== */
+.validation-box {
+  display: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.validation-box.warning {
+  display: block;
+  background: #fffbf0;
+  border: 1.5px solid #f59e0b;
+  color: #92400e;
+}
+
+.validation-box.error {
+  display: block;
+  background: #fff1f0;
+  border: 1.5px solid #ea2322;
+  color: #7f1d1d;
+}
+
+[data-theme="dark"] .validation-box.warning {
+  background: #2a1e00;
+  color: #fbbf24;
+  border-color: #f59e0b;
+}
+
+[data-theme="dark"] .validation-box.error {
+  background: #2a0a0a;
+  color: #fca5a5;
+  border-color: #ea2322;
+}
+
+.unsupported-word {
+  display: inline-block;
+  background: #ea2322;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: var(--font-family-chinese, serif);
+}
+
 /* ===== Progress Bar ===== */
 .progress-container {
   margin: 1rem 0;
