@@ -1084,3 +1084,104 @@ body {
   border-radius: 99px;
   padding: 0.15rem 0.6rem;
 }
+
+/* ===== GitHub Star Popup ===== */
+.star-popup {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: calc(var(--radius) * 1.5);
+  padding: 1rem 1.1rem 1rem 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.13);
+  max-width: 280px;
+  z-index: 1100;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.star-popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.star-popup-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #f59e0b;
+}
+
+.star-popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.star-popup-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.star-popup-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.star-popup-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+  padding: 0.38rem 0.8rem;
+  background: #24292f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s;
+  align-self: flex-start;
+}
+
+.star-popup-btn:hover {
+  background: #3d444d;
+}
+
+[data-theme="dark"] .star-popup-btn {
+  background: #f0f6fc;
+  color: #24292f;
+}
+
+[data-theme="dark"] .star-popup-btn:hover {
+  background: #cdd9e5;
+}
+
+.star-popup-close {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.55rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+
+.star-popup-close:hover {
+  color: var(--text-primary);
+}

@@ -632,6 +632,7 @@
 
       saveAs(blob, `${deckTitleInput.value || 'cantonese-writer'}.apkg`);
       showToast(`Deck generated — ${tableData.length} cards ready to import into Anki`, 'success');
+      setTimeout(showStarPopup, 1400);
     } catch (err) {
       console.error('Generation error:', err);
       showToast('Error generating deck: ' + (err.message || 'Unknown error'), 'error');
@@ -653,6 +654,24 @@
   function updateProgress(pct, msg) {
     progressBar.style.width = pct + '%';
     progressText.textContent = msg || '';
+  }
+
+  function showStarPopup() {
+    if (sessionStorage.getItem('star_popup_shown')) return;
+    sessionStorage.setItem('star_popup_shown', '1');
+    const popup = document.getElementById('star-popup');
+    if (!popup) return;
+    popup.classList.add('visible');
+    const close = document.getElementById('star-popup-close');
+    const dismiss = () => {
+      popup.classList.remove('visible');
+    };
+    close.addEventListener('click', dismiss, { once: true });
+    // Also dismiss after clicking the star link
+    const link = popup.querySelector('.star-popup-btn');
+    if (link) link.addEventListener('click', () => setTimeout(dismiss, 300), { once: true });
+    // Auto-dismiss after 18 seconds
+    setTimeout(dismiss, 18000);
   }
 
   function showToast(message, type = 'success') {
