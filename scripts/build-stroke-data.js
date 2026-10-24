@@ -91,7 +91,14 @@ const OVERRIDES = {
   '冚': { gap: 0, box: { x0: 50, x1: -70, y0: -20 } },
 };
 
-const DEFAULT_GAP = { lr: 20, tb: 20 };
+const DEFAULT_GAP = { lr: 20, tb: 20, rl: 20, bt: 20 };
+
+// Specs chosen automatically by plan-auto-specs.js. Hand-written SPECS win.
+const AUTO_FILE = path.join(__dirname, 'auto-specs.json');
+const AUTO = fs.existsSync(AUTO_FILE) ? JSON.parse(fs.readFileSync(AUTO_FILE, 'utf8')).specs : {};
+const ALL_SPECS = { ...AUTO, ...SPECS };
+// Auto specs, stacked layouts: cap component stretch at 1.5x either way.
+const AUTO_MAX_ANISO = 1.5;
 
 // ---------------------------------------------------------------------------
 // Data loading
@@ -166,7 +173,11 @@ function fitTransform(src, dst, scaleX = 1, scaleY = 1) {
 // Build
 
 async function build(target) {
-  const spec = { ...SPECS[target], ...(OVERRIDES[target] || {}) };
+  const base = ALL_SPECS[target];
+  // Stacked layouts only: side-by-side parts are naturally narrow.
+  const auto = AUTO[target] && !SPECS[target] && (base.layout === 'tb' || base.layout === 'bt')
+    ? { maxAniso: AUTO_MAX_ANISO } : {};
+  const spec = { ...auto, ...ALL_SPECS[target], ...(OVERRIDES[target] || {}) };
   const donor = await load(spec.donor);
   const all = donor.strokes.map((_, i) => i);
 
@@ -188,33 +199,60 @@ async function build(target) {
   const gap = spec.gap ?? DEFAULT_GAP[spec.layout] ?? 0;
   if (spec.layout === 'lr') slot.x0 = Math.max(slot.x0, keepBB.x1 + gap);
   if (spec.layout === 'tb') slot.y1 = Math.min(slot.y1, keepBB.y0 - gap);
+  if (spec.layout === 'rl') slot.x1 = Math.min(slot.x1, keepBB.x0 - gap);
+  if (spec.layout === 'bt') slot.y0 = Math.max(slot.y0, keepBB.y1 + gap);
   if (spec.box) for (const k of ['x0', 'y0', 'x1', 'y1']) slot[k] += spec.box[k] || 0;
 
   const comp = await load(spec.comp);
   const compIdx = spec.compStrokes || comp.strokes.map((_, i) => i);
-  const f = fitTransform(bbox(comp, compIdx), slot, spec.scaleX, spec.scaleY);
-
-  const strokes = keep.map((i) => donor.strokes[i]);
-  const medians = keep.map((i) => donor.medians[i]);
-  for (const i of compIdx) {
-    strokes.push(transformPath(comp.strokes[i], f));
-    medians.push(comp.medians[i].map(([x, y]) => f(x, y).map(Math.round)));
+  const compBB = bbox(comp, compIdx);
+  if (spec.slotFromComp) {
+    // Component lifted from a character that already has it in this position:
+    // keep its designed extent on the cross axis.
+    if (spec.layout === 'lr' || spec.layout === 'rl') { slot.y0 = compBB.y0; slot.y1 = compBB.y1; }
+    if (spec.layout === 'tb' || spec.layout === 'bt') { slot.x0 = compBB.x0; slot.x1 = compBB.x1; }
+    if (spec.box) for (const k of ['x0', 'y0', 'x1', 'y1']) slot[k] += spec.box[k] || 0;
   }
-  return { strokes, medians, radStrokes: spec.radStrokes || keep.map((_, i) => i) };
+  let scaleX = spec.scaleX ?? 1, scaleY = spec.scaleY ?? 1;
+  if (spec.maxAniso) {
+    // Limit how much the component is stretched one way relative to the
+    // other, by shrinking the larger scale (keeps it centred in the slot).
+    const sx = (slot.x1 - slot.x0) / (compBB.x1 - compBB.x0) * scaleX;
+    const sy = (slot.y1 - slot.y0) / (compBB.y1 - compBB.y0) * scaleY;
+    if (sx / sy > spec.maxAniso) scaleX *= (sy * spec.maxAniso) / sx;
+    if (sy / sx > spec.maxAniso) scaleY *= (sx * spec.maxAniso) / sy;
+  }
+  const f = fitTransform(compBB, slot, scaleX, scaleY);
+
+  const kept = { strokes: keep.map((i) => donor.strokes[i]), medians: keep.map((i) => donor.medians[i]) };
+  const placed = {
+    strokes: compIdx.map((i) => transformPath(comp.strokes[i], f)),
+    medians: compIdx.map((i) => comp.medians[i].map(([x, y]) => f(x, y).map(Math.round))),
+  };
+  // 'rl' / 'bt': the kept strokes are the second part, so the placed
+  // component is written first.
+  const [a, b] = spec.layout === 'rl' || spec.layout === 'bt' ? [placed, kept] : [kept, placed];
+  const strokes = [...a.strokes, ...b.strokes];
+  const medians = [...a.medians, ...b.medians];
+  const out = { strokes, medians };
+  // null = radical position unknown (auto specs): omit, it is optional
+  if (spec.radStrokes !== null) out.radStrokes = spec.radStrokes || keep.map((_, i) => i + (a === placed ? placed.strokes.length : 0));
+  return out;
 }
 
 async function main() {
-  const wanted = process.argv.slice(2).join('').split('').filter((c) => c.trim());
-  const targets = wanted.length ? wanted : Object.keys(SPECS);
+  const wanted = Array.from(process.argv.slice(2).join('')).filter((c) => c.trim());
+  const targets = wanted.length ? wanted : Object.keys(ALL_SPECS);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   let failed = 0;
   for (const t of targets) {
-    if (!SPECS[t]) { console.error(`skip ${t}: no spec`); failed++; continue; }
+    if (!ALL_SPECS[t]) { console.error(`skip ${t}: no spec`); failed++; continue; }
     try {
       const data = await build(t);
       if (data.strokes.length !== data.medians.length) throw new Error('strokes/medians length mismatch');
       fs.writeFileSync(path.join(OUT_DIR, t + '.json'), JSON.stringify(data));
-      console.log(`${t}  ${data.strokes.length} strokes  (${SPECS[t].layout}: ${SPECS[t].donor}${SPECS[t].comp ? ' + ' + SPECS[t].comp : ''})`);
+      const sp = ALL_SPECS[t];
+      console.log(`${t}  ${data.strokes.length} strokes  (${sp.layout}: ${sp.donor}${sp.comp ? ' + ' + sp.comp : ''})${AUTO[t] && !SPECS[t] ? ' auto' : ''}`);
     } catch (e) {
       console.error(`FAIL ${t}: ${e.message}`); failed++;
     }
@@ -222,4 +260,5 @@ async function main() {
   process.exitCode = failed ? 1 : 0;
 }
 
-main();
+module.exports = { SPECS };
+if (require.main === module) main();

@@ -48,29 +48,7 @@ HanziWriter stroke data comes from [hanzi-writer-data](https://github.com/chanin
 
 For the most common of these, Cantonese Writer ships **generated stroke data** in [`stroke-data/`](stroke-data/). Each file is composed from existing hanzi-writer-data strokes (e.g. 喺 = the 口 of 唔 + a scaled 係); nothing is hand-drawn. The app and the card template use the official dataset first and fall back to these files. See [`stroke-data/README.md`](stroke-data/README.md) for the method.
 
-**Covered by generated data:**
-
-| Character | Jyutping | Meaning |
-|---|---|---|
-| 佢 | keoi5 | he / she / it |
-| 喺 | hai2 | to be at / in |
-| 咗 | zo2 | completed-action particle |
-| 啱 | ngaam1 | correct / just now |
-| 冇 | mou5 | to not have |
-| 啲 | di1 | some / plural marker |
-| 嚟 | lai4 | to come |
-| 咁 | gam3 | so / such |
-| 哋 | dei6 | plural suffix (我哋, 你哋) |
-| 㗎 | gaa3 | sentence particle |
-| 搵 / 揾 | wan2 | to look for |
-| 諗 | nam2 | to think |
-| 攰 | gui6 | tired |
-| 嘥 | saai1 | to waste |
-| 嗰 | go2 | that |
-| 喐 | juk1 | to move |
-| 冚 | ham6 | whole / all |
-| 噉 | gam2 | like that / so |
-| 嚿 | gau6 | lump / chunk |
+**Covered by generated data:** 167 characters, including the most common Cantonese ones (佢 喺 咗 啱 冇 啲 嚟 咁 哋 㗎 搵 諗 嗰 噉 喎 攞 嗱 黐 啩 抌 孖 餸 冧 踎 揼 劏 𨋢 嚡 …). The full ranked list is in [`stroke-data/targets.tsv`](stroke-data/targets.tsv), and what is and isn't covered is in [`stroke-data/README.md`](stroke-data/README.md).
 
 嘅, 唔 and 係 were listed as unsupported in earlier versions of this README, but they have always been in the official dataset.
 

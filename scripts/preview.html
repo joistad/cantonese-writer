@@ -23,8 +23,8 @@
 <p><button id="all-anim">Animate all</button> <button id="all-quiz">Quiz all</button></p>
 <div class="grid" id="grid"></div>
 <script>
-var CHARS = (new URLSearchParams(location.search).get('chars') ||
-  '佢喺咗啱冇啲嚟咁哋㗎搵諗攰嘥嗰喐揾冚噉嚿').split('');
+var CHARS = Array.from(new URLSearchParams(location.search).get('chars') ||
+  '佢喺咗啱冇啲嚟咁哋㗎搵諗攰嘥嗰喐揾冚噉嚿');
 var writers = {};
 window.quizLog = {};
 

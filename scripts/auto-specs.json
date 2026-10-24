@@ -1,0 +1,3774 @@
+{
+ "specs": {
+  "𡃉": {
+   "layout": "lr",
+   "donor": "嚕",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "駕",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口駕"
+  },
+  "囖": {
+   "layout": "lr",
+   "donor": "囔",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "籮",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+   ],
+   "radStrokes": null,
+   "ids": "⿰口籮"
+  },
+  "喎": {
+   "layout": "lr",
+   "donor": "啼",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "媧",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿰口咼",
+   "slotFromComp": true
+  },
+  "嚹": {
+   "layout": "lr",
+   "donor": "嚷",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "罅",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "radStrokes": null,
+   "ids": "⿰口罅"
+  },
+  "𠸏": {
+   "layout": "lr",
+   "donor": "唪",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "茄",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰口茄"
+  },
+  "𠺢": {
+   "layout": "lr",
+   "donor": "嗅",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "嫁",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰口家",
+   "slotFromComp": true
+  },
+  "攞": {
+   "layout": "lr",
+   "donor": "攢",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "囉",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌羅",
+   "slotFromComp": true
+  },
+  "𡁵": {
+   "layout": "lr",
+   "donor": "嚀",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "緊",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰口緊"
+  },
+  "嗱": {
+   "layout": "lr",
+   "donor": "嗅",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "镎",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口拿",
+   "slotFromComp": true
+  },
+  "吔": {
+   "layout": "lr",
+   "donor": "吁",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "地",
+   "compStrokes": [
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿰口也",
+   "slotFromComp": true
+  },
+  "𠻹": {
+   "layout": "lr",
+   "donor": "嗽",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "添",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰口添"
+  },
+  "撚": {
+   "layout": "lr",
+   "donor": "撅",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "燃",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌然",
+   "slotFromComp": true
+  },
+  "黐": {
+   "layout": "lr",
+   "donor": "黏",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "comp": "縭",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰黍离",
+   "slotFromComp": true
+  },
+  "𠺝": {
+   "layout": "lr",
+   "donor": "嗅",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "格",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰口格"
+  },
+  "啩": {
+   "layout": "lr",
+   "donor": "唪",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "掛",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰口卦",
+   "slotFromComp": true
+  },
+  "搣": {
+   "layout": "lr",
+   "donor": "搋",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "滅",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌烕",
+   "slotFromComp": true
+  },
+  "鶥": {
+   "layout": "lr",
+   "donor": "鹛",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "comp": "鶓",
+   "compStrokes": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "radStrokes": null,
+   "ids": "⿰眉鳥",
+   "slotFromComp": true
+  },
+  "噏": {
+   "layout": "lr",
+   "donor": "嘬",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "翕",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿰口翕"
+  },
+  "唓": {
+   "layout": "lr",
+   "donor": "哦",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "陣",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰口車",
+   "slotFromComp": true
+  },
+  "証": {
+   "layout": "lr",
+   "donor": "訴",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "钲",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰言正",
+   "slotFromComp": true
+  },
+  "抌": {
+   "layout": "lr",
+   "donor": "扭",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "忱",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌冘",
+   "slotFromComp": true
+  },
+  "揦": {
+   "layout": "lr",
+   "donor": "掾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "剌",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌剌"
+  },
+  "𠿪": {
+   "layout": "lr",
+   "donor": "嘯",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "價",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口賈",
+   "slotFromComp": true
+  },
+  "孖": {
+   "layout": "lr",
+   "donor": "孙",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "好",
+   "compStrokes": [
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿰子子",
+   "slotFromComp": true
+  },
+  "唥": {
+   "layout": "lr",
+   "donor": "哦",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "冷",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰口冷"
+  },
+  "拃": {
+   "layout": "lr",
+   "donor": "㧜",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "咋",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌乍",
+   "slotFromComp": true
+  },
+  "孭": {
+   "layout": "lr",
+   "donor": "孫",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "唄",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰子貝",
+   "slotFromComp": true
+  },
+  "餸": {
+   "layout": "lr",
+   "donor": "餬",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "送",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰飠送"
+  },
+  "咓": {
+   "layout": "lr",
+   "donor": "吟",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "佤",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿰口瓦",
+   "slotFromComp": true
+  },
+  "掹": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "猛",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌孟",
+   "slotFromComp": true
+  },
+  "冧": {
+   "layout": "tb",
+   "donor": "冣",
+   "keep": [
+    0,
+    1
+   ],
+   "comp": "森",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿱冖林",
+   "slotFromComp": true
+  },
+  "閪": {
+   "layout": "swap",
+   "donor": "聞",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "boxFrom": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "comp": "西",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿵門西"
+  },
+  "嫲": {
+   "layout": "lr",
+   "donor": "嫖",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "麻",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰女麻"
+  },
+  "啝": {
+   "layout": "lr",
+   "donor": "唪",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "和",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰口和"
+  },
+  "鮓": {
+   "layout": "lr",
+   "donor": "穌",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "comp": "詐",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿰魚乍",
+   "slotFromComp": true
+  },
+  "𡃓": {
+   "layout": "lr",
+   "donor": "嚕",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "播",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口播"
+  },
+  "𥄫": {
+   "layout": "lr",
+   "donor": "盱",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "极",
+   "compStrokes": [
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰目及",
+   "slotFromComp": true
+  },
+  "𦧲": {
+   "layout": "lr",
+   "donor": "鴰",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "螺",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "radStrokes": null,
+   "ids": "⿰舌累",
+   "slotFromComp": true
+  },
+  "摷": {
+   "layout": "lr",
+   "donor": "摑",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "巢",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌巢"
+  },
+  "踎": {
+   "layout": "lr",
+   "donor": "跽",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "否",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰𧾷否"
+  },
+  "鶲": {
+   "layout": "rl",
+   "donor": "鶬",
+   "keep": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "comp": "翁",
+   "radStrokes": null,
+   "ids": "⿰翁鳥"
+  },
+  "鐸": {
+   "layout": "lr",
+   "donor": "鏽",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "譯",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "radStrokes": null,
+   "ids": "⿰金睪",
+   "slotFromComp": true
+  },
+  "揼": {
+   "layout": "lr",
+   "donor": "掾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "泵",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌泵"
+  },
+  "𠝹": {
+   "layout": "rl",
+   "donor": "剮",
+   "keep": [
+    9,
+    10
+   ],
+   "comp": "界",
+   "radStrokes": null,
+   "ids": "⿰界刂"
+  },
+  "櫈": {
+   "layout": "lr",
+   "donor": "檫",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "凳",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰木凳"
+  },
+  "腍": {
+   "layout": "lr",
+   "donor": "勝",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "唸",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰月念",
+   "slotFromComp": true
+  },
+  "絃": {
+   "layout": "lr",
+   "donor": "細",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "舷",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰糹玄",
+   "slotFromComp": true
+  },
+  "奀": {
+   "layout": "tb",
+   "donor": "否",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "旲",
+   "compStrokes": [
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿱不大",
+   "slotFromComp": true
+  },
+  "𡁜": {
+   "layout": "lr",
+   "donor": "嘯",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "禍",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰口禍"
+  },
+  "噚": {
+   "layout": "lr",
+   "donor": "嘬",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "潯",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口尋",
+   "slotFromComp": true
+  },
+  "燶": {
+   "layout": "lr",
+   "donor": "熾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "膿",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "radStrokes": null,
+   "ids": "⿰火農",
+   "slotFromComp": true
+  },
+  "趷": {
+   "layout": "lr",
+   "donor": "趵",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "乾",
+   "compStrokes": [
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰𧾷乞",
+   "slotFromComp": true
+  },
+  "齣": {
+   "layout": "lr",
+   "donor": "齙",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "comp": "駒",
+   "compStrokes": [
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰齒句",
+   "slotFromComp": true
+  },
+  "唞": {
+   "layout": "lr",
+   "donor": "哦",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "抖",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰口抖"
+  },
+  "㧬": {
+   "layout": "tb",
+   "donor": "恐",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "拳",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿱巩手",
+   "slotFromComp": true
+  },
+  "𠮨": {
+   "layout": "lr",
+   "donor": "卟",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "奶",
+   "compStrokes": [
+    3,
+    4
+   ],
+   "radStrokes": null,
+   "ids": "⿰口乃",
+   "slotFromComp": true
+  },
+  "㗳": {
+   "layout": "lr",
+   "donor": "嘬",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "答",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿰口答"
+  },
+  "劏": {
+   "layout": "rl",
+   "donor": "劇",
+   "keep": [
+    13,
+    14
+   ],
+   "comp": "當",
+   "radStrokes": null,
+   "ids": "⿰當刂"
+  },
+  "掟": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啶",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌定",
+   "slotFromComp": true
+  },
+  "𨳍": {
+   "layout": "swap",
+   "donor": "閃",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "boxFrom": [
+    8,
+    9
+   ],
+   "comp": "七",
+   "compStrokes": [
+    0,
+    1
+   ],
+   "radStrokes": null,
+   "ids": "⿵門七"
+  },
+  "埞": {
+   "layout": "lr",
+   "donor": "埝",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啶",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰土定",
+   "slotFromComp": true
+  },
+  "鯁": {
+   "layout": "lr",
+   "donor": "鯇",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "comp": "鲠",
+   "compStrokes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰魚更",
+   "slotFromComp": true
+  },
+  "鴝": {
+   "layout": "lr",
+   "donor": "够",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "鴒",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰句鳥",
+   "slotFromComp": true
+  },
+  "戙": {
+   "layout": "rl",
+   "donor": "战",
+   "keep": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "comp": "同",
+   "radStrokes": null,
+   "ids": "⿰同戈"
+  },
+  "姍": {
+   "layout": "lr",
+   "donor": "妮",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "柵",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰女冊",
+   "slotFromComp": true
+  },
+  "躝": {
+   "layout": "lr",
+   "donor": "躞",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "攔",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "radStrokes": null,
+   "ids": "⿰𧾷闌",
+   "slotFromComp": true
+  },
+  "蓆": {
+   "layout": "tb",
+   "donor": "蒓",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "席",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿱艹席"
+  },
+  "褦": {
+   "layout": "lr",
+   "donor": "褟",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "能",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰衤能"
+  },
+  "䟴": {
+   "layout": "lr",
+   "donor": "跽",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "娠",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰𧾷辰",
+   "slotFromComp": true
+  },
+  "鵐": {
+   "layout": "lr",
+   "donor": "覡",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "鵑",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "radStrokes": null,
+   "ids": "⿰巫鳥",
+   "slotFromComp": true
+  },
+  "髏": {
+   "layout": "lr",
+   "donor": "髋",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "comp": "縷",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "radStrokes": null,
+   "ids": "⿰骨婁",
+   "slotFromComp": true
+  },
+  "吽": {
+   "layout": "lr",
+   "donor": "吟",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "件",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿰口牛",
+   "slotFromComp": true
+  },
+  "擸": {
+   "layout": "lr",
+   "donor": "擴",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "獵",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌巤",
+   "slotFromComp": true
+  },
+  "𢱕": {
+   "layout": "lr",
+   "donor": "掾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "耷",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌耷"
+  },
+  "捽": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啐",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌卒",
+   "slotFromComp": true
+  },
+  "燁": {
+   "layout": "lr",
+   "donor": "熜",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "曄",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰火華",
+   "slotFromComp": true
+  },
+  "綫": {
+   "layout": "lr",
+   "donor": "綜",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "賤",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰糹戔",
+   "slotFromComp": true
+  },
+  "掯": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啃",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌肯",
+   "slotFromComp": true
+  },
+  "踭": {
+   "layout": "lr",
+   "donor": "跟",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "净",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰𧾷争",
+   "slotFromComp": true
+  },
+  "鎚": {
+   "layout": "lr",
+   "donor": "鍊",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "槌",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰金追",
+   "slotFromComp": true
+  },
+  "扱": {
+   "layout": "lr",
+   "donor": "托",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "圾",
+   "compStrokes": [
+    3,
+    4,
+    5
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌及",
+   "slotFromComp": true
+  },
+  "擝": {
+   "layout": "lr",
+   "donor": "撼",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "盟",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌盟"
+  },
+  "瀅": {
+   "layout": "lr",
+   "donor": "濺",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "瑩",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰氵瑩"
+  },
+  "揈": {
+   "layout": "lr",
+   "donor": "掾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "鞫",
+   "compStrokes": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌訇",
+   "slotFromComp": true
+  },
+  "嚐": {
+   "layout": "lr",
+   "donor": "嚀",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "嘗",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰口嘗"
+  },
+  "蚚": {
+   "layout": "lr",
+   "donor": "蚊",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "斫",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰虫斤",
+   "slotFromComp": true
+  },
+  "掗": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啞",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌亞",
+   "slotFromComp": true
+  },
+  "啋": {
+   "layout": "lr",
+   "donor": "唪",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "採",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰口采",
+   "slotFromComp": true
+  },
+  "鷚": {
+   "layout": "lr",
+   "donor": "鹨",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "comp": "鷓",
+   "compStrokes": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "radStrokes": null,
+   "ids": "⿰翏鳥",
+   "slotFromComp": true
+  },
+  "掕": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "淩",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌夌",
+   "slotFromComp": true
+  },
+  "𨋢": {
+   "layout": "lr",
+   "donor": "軫",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "粒",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰車立",
+   "slotFromComp": true
+  },
+  "鍍": {
+   "layout": "lr",
+   "donor": "鍊",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "踱",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰金度",
+   "slotFromComp": true
+  },
+  "呯": {
+   "layout": "lr",
+   "donor": "呣",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "坪",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰口平",
+   "slotFromComp": true
+  },
+  "㓤": {
+   "layout": "lr",
+   "donor": "劼",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "刮",
+   "compStrokes": [
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰吉刂",
+   "slotFromComp": true
+  },
+  "鎅": {
+   "layout": "lr",
+   "donor": "鍊",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "界",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰金界"
+  },
+  "嫋": {
+   "layout": "lr",
+   "donor": "媲",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "搦",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰女弱",
+   "slotFromComp": true
+  },
+  "軚": {
+   "layout": "lr",
+   "donor": "斬",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "酞",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰車太",
+   "slotFromComp": true
+  },
+  "揗": {
+   "layout": "lr",
+   "donor": "掾",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "循",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌盾",
+   "slotFromComp": true
+  },
+  "孻": {
+   "layout": "lr",
+   "donor": "孺",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "儘",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰子盡",
+   "slotFromComp": true
+  },
+  "嚡": {
+   "layout": "lr",
+   "donor": "嚕",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "鞋",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口鞋"
+  },
+  "㩧": {
+   "layout": "lr",
+   "donor": "擴",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "爆",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌暴",
+   "slotFromComp": true
+  },
+  "骹": {
+   "layout": "lr",
+   "donor": "骸",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "comp": "鉸",
+   "compStrokes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰骨交",
+   "slotFromComp": true
+  },
+  "礫": {
+   "layout": "lr",
+   "donor": "礙",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "櫟",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "radStrokes": null,
+   "ids": "⿰石樂",
+   "slotFromComp": true
+  },
+  "烚": {
+   "layout": "lr",
+   "donor": "烊",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "恰",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "radStrokes": null,
+   "ids": "⿰火合",
+   "slotFromComp": true
+  },
+  "噃": {
+   "layout": "lr",
+   "donor": "嘬",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "幡",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口番",
+   "slotFromComp": true
+  },
+  "箇": {
+   "layout": "tb",
+   "donor": "箅",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "崮",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿱竹固",
+   "slotFromComp": true
+  },
+  "梘": {
+   "layout": "lr",
+   "donor": "桫",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "規",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰木見",
+   "slotFromComp": true
+  },
+  "厠": {
+   "layout": "swap",
+   "donor": "厢",
+   "keep": [
+    0,
+    1
+   ],
+   "boxFrom": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "comp": "廁",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "radStrokes": null,
+   "ids": "⿸厂則"
+  },
+  "㩒": {
+   "layout": "lr",
+   "donor": "撼",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "噤",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌禁",
+   "slotFromComp": true
+  },
+  "痠": {
+   "layout": "swap",
+   "donor": "痘",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "boxFrom": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "comp": "夋",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿸疒夋"
+  },
+  "掅": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "婧",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌青",
+   "slotFromComp": true
+  },
+  "嚫": {
+   "layout": "lr",
+   "donor": "嚥",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "襯",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "radStrokes": null,
+   "ids": "⿰口親",
+   "slotFromComp": true
+  },
+  "𠻗": {
+   "layout": "lr",
+   "donor": "嗅",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "漓",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰口离",
+   "slotFromComp": true
+  },
+  "敆": {
+   "layout": "lr",
+   "donor": "鸽",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "敲",
+   "compStrokes": [
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰合攴",
+   "slotFromComp": true
+  },
+  "癐": {
+   "layout": "swap",
+   "donor": "癔",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "boxFrom": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "comp": "會",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿸疒會"
+  },
+  "晞": {
+   "layout": "lr",
+   "donor": "晗",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "烯",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰日希",
+   "slotFromComp": true
+  },
+  "簍": {
+   "layout": "tb",
+   "donor": "篼",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "婁",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿱竹婁"
+  },
+  "柺": {
+   "layout": "lr",
+   "donor": "枯",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "拐",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰木另",
+   "slotFromComp": true
+  },
+  "㧻": {
+   "layout": "lr",
+   "donor": "捧",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "啄",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌豖",
+   "slotFromComp": true
+  },
+  "𢴈": {
+   "layout": "lr",
+   "donor": "摑",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "笪",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌笪"
+  },
+  "譁": {
+   "layout": "lr",
+   "donor": "謫",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "曄",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰言華",
+   "slotFromComp": true
+  },
+  "徛": {
+   "layout": "lr",
+   "donor": "得",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "埼",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰彳奇",
+   "slotFromComp": true
+  },
+  "𡀔": {
+   "layout": "lr",
+   "donor": "嘯",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "潞",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "radStrokes": null,
+   "ids": "⿰口路",
+   "slotFromComp": true
+  },
+  "𥊙": {
+   "layout": "lr",
+   "donor": "瞘",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "傻",
+   "compStrokes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "radStrokes": null,
+   "ids": "⿰目𡕩",
+   "slotFromComp": true
+  },
+  "𠴕": {
+   "layout": "lr",
+   "donor": "哦",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "妙",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰口妙"
+  },
+  "鸛": {
+   "layout": "lr",
+   "donor": "顴",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "comp": "鸘",
+   "compStrokes": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "radStrokes": null,
+   "ids": "⿰雚鳥",
+   "slotFromComp": true
+  },
+  "淰": {
+   "layout": "lr",
+   "donor": "涪",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "唸",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "radStrokes": null,
+   "ids": "⿰氵念",
+   "slotFromComp": true
+  },
+  "靄": {
+   "layout": "tb",
+   "donor": "靂",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "comp": "藹",
+   "compStrokes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "radStrokes": null,
+   "ids": "⿱雨謁",
+   "slotFromComp": true
+  },
+  "扽": {
+   "layout": "lr",
+   "donor": "扭",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "吨",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌屯",
+   "slotFromComp": true
+  },
+  "鶪": {
+   "layout": "rl",
+   "donor": "鶓",
+   "keep": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "comp": "狊",
+   "radStrokes": null,
+   "ids": "⿰狊鳥"
+  },
+  "嚤": {
+   "layout": "lr",
+   "donor": "嚕",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "摩",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰口摩"
+  },
+  "膶": {
+   "layout": "lr",
+   "donor": "膦",
+   "keep": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "comp": "潤",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰月閏",
+   "slotFromComp": true
+  },
+  "睺": {
+   "layout": "lr",
+   "donor": "睽",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "糇",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "radStrokes": null,
+   "ids": "⿰目侯",
+   "slotFromComp": true
+  },
+  "巉": {
+   "layout": "lr",
+   "donor": "巆",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "攙",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+   ],
+   "radStrokes": null,
+   "ids": "⿰山毚",
+   "slotFromComp": true
+  },
+  "咇": {
+   "layout": "lr",
+   "donor": "呣",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "泌",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰口必",
+   "slotFromComp": true
+  },
+  "砵": {
+   "layout": "lr",
+   "donor": "砝",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "钵",
+   "compStrokes": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "radStrokes": null,
+   "ids": "⿰石本",
+   "slotFromComp": true
+  },
+  "諍": {
+   "layout": "lr",
+   "donor": "詡",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "comp": "静",
+   "compStrokes": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "radStrokes": null,
+   "ids": "⿰言争",
+   "slotFromComp": true
+  },
+  "繑": {
+   "layout": "lr",
+   "donor": "繒",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "蟜",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "radStrokes": null,
+   "ids": "⿰糹喬",
+   "slotFromComp": true
+  },
+  "髧": {
+   "layout": "tb",
+   "donor": "髦",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "comp": "冘",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "radStrokes": null,
+   "ids": "⿱髟冘"
+  },
+  "竉": {
+   "layout": "tb",
+   "donor": "竇",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "comp": "籠",
+   "compStrokes": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+   ],
+   "radStrokes": null,
+   "ids": "⿱穴龍",
+   "slotFromComp": true
+  },
+  "扤": {
+   "layout": "lr",
+   "donor": "托",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "杌",
+   "compStrokes": [
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌兀",
+   "slotFromComp": true
+  },
+  "坺": {
+   "layout": "lr",
+   "donor": "坤",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "拔",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "radStrokes": null,
+   "ids": "⿰土犮",
+   "slotFromComp": true
+  },
+  "抆": {
+   "layout": "lr",
+   "donor": "扭",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "坟",
+   "compStrokes": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "radStrokes": null,
+   "ids": "⿰扌文",
+   "slotFromComp": true
+  },
+  "灤": {
+   "layout": "lr",
+   "donor": "灣",
+   "keep": [
+    0,
+    1,
+    2
+   ],
+   "comp": "欒",
+   "compStrokes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+   ],
+   "radStrokes": null,
+   "ids": "⿰氵欒"
+  },
+  "縐": {
+   "layout": "lr",
+   "donor": "緻",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "comp": "謅",
+   "compStrokes": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "radStrokes": null,
+   "ids": "⿰糹芻",
+   "slotFromComp": true
+  },
+  "𪐀": {
+   "layout": "lr",
+   "donor": "黏",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "comp": "黟",
+   "compStrokes": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ],
+   "radStrokes": null,
+   "ids": "⿰黍多",
+   "slotFromComp": true
+  },
+  "𨳊": {
+   "layout": "swap",
+   "donor": "閃",
+   "keep": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "boxFrom": [
+    8,
+    9
+   ],
+   "comp": "九",
+   "compStrokes": [
+    0,
+    1
+   ],
+   "radStrokes": null,
+   "ids": "⿵門九"
+  }
+ },
+ "skipped": {
+  "𠻺": "no source for 掗",
+  "乸": "structure ⿺也母",
+  "㷫": "rejected: bottom 火 too small (donor 磬 has a short bottom slot)",
+  "𢫏": "structure ⿰扌⿱冂山",
+  "搲": "no source for 窊",
+  "屘": "structure ⿺尾子",
+  "𠸎": "no source for 拏",
+  "糴": "rejected: left 籴 squeezed into a sliver",
+  "覮": "rejected: top 𤇾 comes out malformed",
+  "𣲷": "no source for 㘝",
+  "𥹉": "no source for 㘝",
+  "潁": "structure ⿰⿱匕水頁"
+ }
+}
