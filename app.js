@@ -10,15 +10,21 @@
 
   async function charHasHanziData(char) {
     if (_hanziDataCache.has(char)) return _hanziDataCache.get(char);
-    try {
-      const res = await fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@latest/${encodeURIComponent(char)}.json`);
-      const ok = res.ok;
-      _hanziDataCache.set(char, ok);
-      return ok;
-    } catch {
-      _hanziDataCache.set(char, false);
-      return false;
+    const enc = encodeURIComponent(char);
+    const sources = [
+      `https://cdn.jsdelivr.net/npm/hanzi-writer-data@latest/${enc}.json`,
+      // Generated data for Cantonese-only characters (see stroke-data/README.md)
+      `stroke-data/${enc}.json`,
+    ];
+    let ok = false;
+    for (const url of sources) {
+      try {
+        const res = await fetch(url);
+        if (res.ok) { ok = true; break; }
+      } catch { /* try next source */ }
     }
+    _hanziDataCache.set(char, ok);
+    return ok;
   }
 
   async function wordIsSupported(word) {

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="yue-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stroke data preview</title>
+<!-- Serve the repo root (e.g. `python3 -m http.server`) and open /scripts/preview.html -->
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fafafa; color: #222; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .cell { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 8px; }
+  .row { display: flex; gap: 6px; align-items: center; }
+  .ref { width: 120px; height: 120px; font: 104px/120px "Noto Sans CJK HK", "Noto Sans HK", sans-serif;
+         text-align: center; color: #999; border: 1px dashed #ccc; }
+  .hw { width: 120px; height: 120px; border: 1px dashed #ccc; }
+  .meta { font-size: 12px; margin-top: 4px; color: #555; }
+  button { font-size: 12px; }
+</style>
+</head>
+<body>
+<h3>Generated stroke data — left: font reference, right: Hanzi Writer</h3>
+<p><button id="all-anim">Animate all</button> <button id="all-quiz">Quiz all</button></p>
+<div class="grid" id="grid"></div>
+<script>
+var CHARS = (new URLSearchParams(location.search).get('chars') ||
+  '佢喺咗啱冇啲嚟咁哋㗎搵諗攰嘥嗰喐揾冚噉嚿').split('');
+var writers = {};
+window.quizLog = {};
+
+function loader(ch, onLoad, onError) {
+  fetch('../stroke-data/' + encodeURIComponent(ch) + '.json')
+    .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+    .then(onLoad).catch(onError);
+}
+
+CHARS.forEach(function (ch) {
+  var cell = document.createElement('div');
+  cell.className = 'cell';
+  cell.innerHTML = '<div class="row"><div class="ref">' + ch + '</div><div class="hw" id="hw-' + ch + '"></div></div>' +
+    '<div class="meta"><button data-a>animate</button> <button data-q>quiz</button> <span data-s></span></div>';
+  document.getElementById('grid').appendChild(cell);
+  var w = HanziWriter.create('hw-' + ch, ch, {
+    width: 120, height: 120, padding: 4, charDataLoader: loader,
+    showOutline: true, strokeAnimationSpeed: 2, delayBetweenStrokes: 60,
+    radicalColor: '#c0392b'
+  });
+  writers[ch] = w;
+  var status = cell.querySelector('[data-s]');
+  cell.querySelector('[data-a]').onclick = function () { w.animateCharacter(); };
+  cell.querySelector('[data-q]').onclick = function () { runQuiz(ch, status); };
+});
+
+function runQuiz(ch, status) {
+  var log = window.quizLog[ch] = { ok: 0, miss: 0, done: false };
+  writers[ch].quiz({
+    onCorrectStroke: function () { log.ok++; status.textContent = log.ok + ' ok / ' + log.miss + ' miss'; },
+    onMistake: function () { log.miss++; status.textContent = log.ok + ' ok / ' + log.miss + ' miss'; },
+    onComplete: function () { log.done = true; status.textContent += ' — done'; }
+  });
+}
+window.startQuiz = function (ch) {
+  runQuiz(ch, document.getElementById('hw-' + ch).parentNode.parentNode.querySelector('[data-s]'));
+};
+document.getElementById('all-anim').onclick = function () { CHARS.forEach(function (c) { writers[c].animateCharacter(); }); };
+document.getElementById('all-quiz').onclick = function () { CHARS.forEach(function (c) { window.startQuiz(c); }); };
+</script>
+</body>
+</html>
