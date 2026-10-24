@@ -153,7 +153,7 @@ const CantoneseDict = (function () {
    */
   function getJyutping(text) {
     if (typeof cantojpmin_data === 'undefined') return '';
-    const chars = text.split('');
+    const chars = Array.from(text);
     const result = [];
     for (const char of chars) {
       const jp = cantojpmin_data[char];
@@ -235,7 +235,7 @@ const CantoneseDict = (function () {
    * Extract Chinese character sequences from text
    */
   function extractChineseWords(text) {
-    const matches = text.match(/[\u4e00-\u9fff\u3400-\u4dbf\uF900-\uFAFF]+/g);
+    const matches = text.match(/[\u3400-\u4dbf\u4e00-\u9fff\uF900-\uFAFF\u{20000}-\u{323AF}]+/gu);
     return matches || [];
   }
 

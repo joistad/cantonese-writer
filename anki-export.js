@@ -48,7 +48,7 @@ const AnkiExport = (function () {
     const defs = card.definitions || '';
 
     const jyutSyllables = jyut.split(/\s+/);
-    const tradChars = trad.split('');
+    const tradChars = Array.from(trad);
 
     let tradSpan = '';
     for (let j = 0; j < tradChars.length; j++) {
@@ -76,7 +76,7 @@ const AnkiExport = (function () {
     const trad = card.traditional;
     const jyut = card.jyutping || '';
     const syllables = jyut.split(/\s+/);
-    const chars = trad.split('');
+    const chars = Array.from(trad);
 
     return chars.map((ch, i) => {
       const syl = syllables[i] || '';

@@ -28,7 +28,8 @@
   }
 
   async function wordIsSupported(word) {
-    const cjkRe = /[\u4e00-\u9fff\u3400-\u4dbf\uF900-\uFAFF]/;
+    // Includes CJK Extensions B+ (𠵱, 𨋢, 𡃁 …), which are outside the BMP
+    const cjkRe = /[\u3400-\u4dbf\u4e00-\u9fff\uF900-\uFAFF\u{20000}-\u{323AF}]/u;
     for (const char of word) {
       if (!cjkRe.test(char)) continue;
       if (!(await charHasHanziData(char))) return false;
@@ -340,7 +341,7 @@
   async function addWord(word) {
     word = word.trim();
     if (!word) return;
-    if (!/[\u4e00-\u9fff\u3400-\u4dbf\uF900-\uFAFF]/.test(word)) return;
+    if (!/[\u3400-\u4dbf\u4e00-\u9fff\uF900-\uFAFF\u{20000}-\u{323AF}]/u.test(word)) return;
     if (tableData.some(d => d.traditional === word)) return;
 
     const result = await CantoneseDict.fullLookup(word);
@@ -404,7 +405,7 @@
     const chars = [];
     for (const word of words) {
       chars.push(word);
-      if (word.length > 1) {
+      if ([...word].length > 1) {
         for (const ch of word) {
           if (!chars.includes(ch)) chars.push(ch);
         }
